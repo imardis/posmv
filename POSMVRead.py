@@ -523,7 +523,7 @@ class C_1:
 		return "Date, Latitude, Longitude, Altitude, Pitch, Roll, Heading, Speed"
 		
 	def __str__(self):
-		return from_timestamp(self.timeStamp).strftime('%Y/%m/%d %H:%M:%S.%f')[:-3] + str(" %.10f, %.10f, %.3f, %.3f, %.3f, %.3f, %.3f" % (self.latitude, self.longitude, self.altitude, self.vesselPitch, self.vesselRoll, self.vesselHeading, self.vesselSpeed))
+		return from_timestamp(self.timeStamp).strftime('%Y/%m/%d %H:%M:%S.%f')[:-3] + str(", %.10f, %.10f, %.3f, %.3f, %.3f, %.3f, %.3f" % (self.latitude, self.longitude, self.altitude, self.vesselPitch, self.vesselRoll, self.vesselHeading, self.vesselSpeed))
 
 	def read(self):
 		self.fileptr.seek(self.offset, 0)
